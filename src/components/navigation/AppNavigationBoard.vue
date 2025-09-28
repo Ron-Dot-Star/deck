@@ -124,6 +124,7 @@
 		</NcColorPicker>
 		<form @submit.prevent.stop="applyEdit">
 			<NcTextField ref="inputField"
+				@keyup.enter="applyEdit"
 				:disable="loading"
 				:value.sync="editTitle"
 				:placeholder="t('deck', 'Board name')"
